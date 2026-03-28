@@ -1,3 +1,4 @@
+package R1600;
 /* 372A
     Approach: 
         - Since we know that only kangaroos that double the size of another kangaroo can hold a kangaroo,
