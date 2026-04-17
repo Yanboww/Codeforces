@@ -20,9 +20,12 @@ package R1600;
                     from 1 spot to the other, then in follows that in the best case, subsequent point
                     will at best have n-1, n-2 and eventually 1 mushroom leftover
                     - This minimum is always possible thanks to the fact that we can choose to not move,
-                    allowing us to wait on the other points to spawn more mushrooms (this prevents waste
-                    as if we must move, we could end up having n(n+1)/2 mushrooms and then
-                    generate more as we collect them, resulting in more mushrooms being leftover)
+                    allowing us to wait on the other points to spawn more mushrooms. If we are at 
+                    point 1, we would need n-1 minutes to reach the end of the forest. If we have k minutes,
+                    and we stay k-(n-1) minutes at point 1, we would have exactly n-1 minutes leftover. Then,
+                    we start moving towards the end, and the point we visited the longest time ago after n-1 
+                    minutes would be point 1 which would have exactly n mushrooms. Since we moved 1 by 1 to
+                    subsequent points, this would mean point 2 would have n-1 mushrooms and so on.
                 - nk - n(n+1)/2 then would represent the amount of spawned mushrooms we have collected
  */
 import java.util.*;
