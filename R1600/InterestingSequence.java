@@ -2,7 +2,7 @@ package R1600;
 /* 1775C
     Approach: 
         - Key concept here is understanding the & operator. 
-            -If a bit in x is 0, that must mean either the bit at the same position is also 
+            -If a bit in x is 0, that must mean either the bit at the same position in n is also 
             0 or the range of n to m has a 0 at that postion.
             -If a bit in x is 1, that must mean that at that position, all numbers in the 
             range n to m must have 1
@@ -23,7 +23,7 @@ package R1600;
             bits to be 0 because it gurantees a number with 1 followed by all 0s, and with &
             operators, once a bit turns 0, it can never turn to any other value.
             - If this happens just return -1. We should not try to change when we shift because
-            if we do a previous position where x = 1 and n = 0 would then be impossible instead
+            if we do, a previous position where n = 1 and x = 0 would then be impossible instead
         - Then we can parse the bits back into decimal and check if m >= n as the question
         requires m >= n
 */
