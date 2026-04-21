@@ -1,3 +1,4 @@
+package R1600;
 /* 1217B
     Approach:
         - Since after each attack, we cut off di heads and Zmei Gorynich regenrates hi heads, we only end
