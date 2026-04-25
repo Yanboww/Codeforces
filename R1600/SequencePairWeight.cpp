@@ -28,7 +28,6 @@
 */
 #include <iostream>
 #include <unordered_map>
-#include <vector>
 
 int main(){
     int t;
@@ -36,13 +35,12 @@ int main(){
     while(t-- > 0){
         int n;
         std::cin >> n;
-        std::vector<int> a(n);
-        for(int& val : a) std::cin >> val;
         std::unordered_map<int, long long> prefixChoice;
         long long sum = 0;
         for(int i = 0; i < n; i++){
-            sum += prefixChoice[a[i]] * (n-i);
-            prefixChoice[a[i]] += i+1;
+            int key; std::cin >> key;
+            sum += prefixChoice[key] * (n-i);
+            prefixChoice[key] += i+1;
         }
         std::cout << sum << "\n";
     }
