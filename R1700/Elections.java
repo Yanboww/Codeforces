@@ -1,3 +1,4 @@
+package R1700;
 /* 1019A (got hint to try all votes where party 1 can win)
     Approach: Iterate through all possible votes at which party 1 votes. If there
     are other parties which this number of votes, i, we must buy the cheapest votes
