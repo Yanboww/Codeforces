@@ -25,6 +25,12 @@ package R1700;
                 - If this stack is not empty by the time the loop finished, it means
                 that there are not enough free days or days that Vasiliy can skip so
                 that Vasiliy studies sufficiently for all exams.
+                - O(1) space optimization :
+                    - Add all study times to a single variable. This would
+                    essentially be the same as we are iterating backwards,
+                    therefore, all subsequent iterations can contribute to 
+                    the study times of any exam that we already marked as 
+                    passed.
 */
 import java.util.*;
 
