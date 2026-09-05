@@ -15,7 +15,7 @@
                 - We use j-m+1 and j because if j is the last index, and each group must be size m, then 
                 the only possible way we have j as the last index is if we started the group at a index
                 where j - index + 1 = m.
-            2. Then, we want to add it to the value at dp[i-1][j-m+1]. This will essentially find the sum when 
+            2. Then, we want to add it to the value at dp[i-1][j-m]. This will essentially find the sum when 
             we had summed up i instead i+1 groups and had the largest index that we could have ended off without
             overlapping with our new last group. 
             3. Lastly, we will compare this sum with the value stored at (i,j-1), the sum that we calculated in the 
