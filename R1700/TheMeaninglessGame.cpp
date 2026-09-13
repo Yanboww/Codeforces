@@ -3,12 +3,12 @@
     cube root or if it was not a divisor of both a and b, return "No". Otherwise, return "Yes".
         - Let S be the set of numbers Slastyona said and P be the set of numbers Pushok barked. This would mean Slastyona's
         score would be S^2 * P and Pushok's score would be S * P^2.
-        - Then, to simply this into 1 equation, we can multiple the 2 scores, together, resulting in the equation 
+        - Then, to simplify this into 1 equation, we can multiple the 2 scores, together, resulting in the equation 
         S^3 + P^3 = a * b -> S * P = cbrt(a*b)
-            - Based on this, we know a few this. 
-                1. The product of a * b must be a perfect cube since S and P must be product natural numbers, meaning their
+            - Based on this, we know a few things. 
+                1. The product of a * b must be a perfect cube since S and P must be product of natural numbers, meaning their
                 product must be a whole number.
-                2.  Since Slastyona's score = S^2 + P, we can rewrite it into S (S * P). This would be the same as S * cbrt(ab).
+                2. Since Slastyona's score = S^2 * P, we can rewrite it into S (S * P). This would be the same as S * cbrt(ab).
                 Once again, since S is the product of natural numbers, S must also be natural and therefore cbrt(ab) should be a
                 divisor of Slastyona's score.
                 3. The same thing can be done for Pushok. S * P^2 -> P(S*P)
