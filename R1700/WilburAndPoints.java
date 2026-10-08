@@ -1,3 +1,4 @@
+package R1700;
 /*596C
     Approach: Create a hashmap/dict storing the pairs with the key being the special value. The pairs for each
     pair must be sorted and for each index. We will then find the smallest pair that has the specified special
