@@ -14,7 +14,7 @@ package R1700;
             - If we have no pairs remaining with a special value, we automatically know that it is impossible to
             construct a valid result and exit early.
             - If yes, we will retrieve the minimum pair with the special value and assign it to the index.
-                - We want to greedily assign the minimum because it guarantees that the resulting array is in the
+                - We want to assign the minimum because it guarantees that the resulting array is in the
                 best possible form to prevent cases where there is a pair (x',y') where x' >= x and y' >= y but is
                 at an earlier index than (x,y).
                     - In other words, we are assigning the minimum pair we can each time.
@@ -61,7 +61,7 @@ public class WilburAndPoints {
         }
 
         int[][] res = new int[n][2];
-        HashSet<String> prev = new HashSet<>();
+        HashSet<Long> prev = new HashSet<>();
         boolean found = true;
         for(int i = 0; i < n; i++){
             if(!pairsv.containsKey(sv[i]) || pairsv.get(sv[i]).isEmpty()){
@@ -69,15 +69,15 @@ public class WilburAndPoints {
             } else{
                 res[i] = pairsv.get(sv[i]).poll();
 
-                String cur = (res[i][0])+" "+(res[i][1]);
+                long cur = (res[i][0] << 32) | res[i][1];
                 boolean hasPre = true;
                 if(res[i][0]-1 >= 0){
-                    String pre = (res[i][0]-1)+" "+(res[i][1]);
+                    long pre = ((res[i][0]-1) << 32) | res[i][1];
                     if(!prev.contains(pre)) hasPre = false;
                 }
 
                 if(res[i][1]-1 >= 0){
-                    String pre = (res[i][0])+" "+(res[i][1]-1);
+                    long pre = (res[i][0] << 32) | (res[i][1]-1);
                     if(!prev.contains(pre)) hasPre = false;
                 }
 
