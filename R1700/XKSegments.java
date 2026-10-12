@@ -1,3 +1,5 @@
+package R1700;
+
 /* 895B
     Approach: Sort the array in non-decreasing order. Then, iterating from 0 to n-1 to set the l. After
     that, we will use binary search to find the lower bound and upper bound of indexes of r for the l
