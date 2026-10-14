@@ -11,6 +11,9 @@ package R1700;
         very simple. 
             - We do not subtract because doing so will make use revisit pointers we already tested could not only lead
             to redudant work but disrupt the logic we used for the 2 pointers in the first place (monotonicity).
+            - Though I will mention that if you set b = n and set a to a sufficiently large number and then decrease a when
+            a/b > x/y and decrease b when a/b < x/y, you could still make it work. However, this is slightly more annoying
+            because you have to figure out what is a sufficiently large starting value for a.
         - Then, as the question requests, we simply want to store the a/b closest to x/y across every combination of a/b
         that we try.
             - We start with 0/1 because they are the minimum possible value for the numerator and denominator respectively.
