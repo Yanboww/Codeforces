@@ -20,12 +20,10 @@
 
 int main(){
     int n,m; std::cin >> n >> m;
-    std::vector<std::pair<int,int>> sub;
     int maxMex = n;
     for(int i = 0; i < m; i++){
         int l,r; std::cin >> l >> r;
         maxMex = std::min(maxMex, r-l+1);
-        sub.push_back({l-1,r-1});
     }
 
     std::cout << maxMex << "\n";
