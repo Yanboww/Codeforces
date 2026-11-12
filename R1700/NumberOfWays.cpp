@@ -4,7 +4,9 @@
     2. If sum of elements at [0,i] is x and 3 * x == total_sum, then if there exists an index j such that
     the sum of elements at [0,j] is 2x, then (i,j) must be valid pairs for forming the 3 segments
         - if [0,i] = x and [0,j] = 2x, [i+1,j] = x. This means [j+1,n] must also be equal to x
-    3. In the previous condition, j can never be n. This is because we can't have a segment with no elements
+        - i < j since otherwise, [0,j] would be segment 1 with 2x and [0,i] = x, meaning segment1 must be bigger
+        than segment2 at the very least. This is invalid.
+    3. In the previous condition, j can never be n-1. This is because we can't have a segment with no elements
 
 
     To implement this, we can simply have a prefix sum to keep track of the sums from 0 to a given index. Then,
